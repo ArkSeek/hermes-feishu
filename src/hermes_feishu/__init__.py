@@ -10,7 +10,7 @@ from .schemas import SEND_FEISHU_CARD_SCHEMA, SEND_FEISHU_TABLE_SCHEMA
 from .sender import _has_credentials
 from .tools import send_feishu_card, send_feishu_table
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 # Context injection for Feishu platform
 _FEISHU_CONTEXT_INJECTION = (
