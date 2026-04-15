@@ -45,35 +45,32 @@
 
 ## 第三步：安装插件
 
-### 方式一：pip 安装（推荐）
-
 ```bash
 pip install hermes-feishu
 ```
 
 安装后 Hermes 会在下次启动时自动发现插件。
 
-### 方式二：从源码安装（开发模式）
+<details>
+<summary>其他安装方式（开发/手动）</summary>
+
+### 从源码安装（开发模式）
 
 ```bash
-# 克隆仓库
-git clone https://github.com/your-username/hermes-feishu.git
+git clone https://github.com/ArkSeek/hermes-feishu.git
 cd hermes-feishu
-
-# 安装（开发模式，修改源码后立即生效）
 pip install -e .
 ```
 
-### 方式三：手动复制到 Hermes 插件目录
+### 手动复制到 Hermes 插件目录
 
 ```bash
-# 复制插件清单
 mkdir -p ~/.hermes/plugins/hermes-feishu
 cp plugin.yaml ~/.hermes/plugins/hermes-feishu/
-
-# 复制源码
 cp -r src/hermes_feishu/ ~/.hermes/plugins/hermes-feishu/
 ```
+
+</details>
 
 ## 第四步：配置环境变量
 
