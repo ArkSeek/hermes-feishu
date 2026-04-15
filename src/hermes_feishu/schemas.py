@@ -61,10 +61,10 @@ SEND_FEISHU_CARD_SCHEMA = {
                 "type": "string",
                 "description": (
                     "Optional emoji to add as reaction after sending. "
-                    "Default: '✅' (automatically added if not specified). "
+                    "Default: '👍' (automatically added if not specified). "
                     "Pass empty string '' to skip reaction."
                 ),
-                "default": "✅",
+                "default": "👍",
             },
         },
         "required": ["content"],
@@ -123,10 +123,10 @@ SEND_FEISHU_TABLE_SCHEMA = {
                 "type": "string",
                 "description": (
                     "Optional emoji to add as reaction after sending. "
-                    "Default: '✅' (automatically added if not specified). "
+                    "Default: '👍' (automatically added if not specified). "
                     "Pass empty string '' to skip reaction."
                 ),
-                "default": "✅",
+                "default": "👍",
             },
         },
         "required": ["headers", "rows"],

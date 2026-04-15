@@ -114,9 +114,9 @@ def send_card(
     Returns:
         JSON string with send result: {"success": bool, "message_id": str|None, "error": str|None}
     """
-    # Default reaction: ✅ (unless explicitly set to empty string)
+    # Default reaction: 👍 (unless explicitly set to empty string)
     if add_reaction is None:
-        add_reaction = "✅"
+        add_reaction = "👍"
     if app_id is None or app_secret is None:
         try:
             resolved_id, resolved_secret = _get_credentials()
