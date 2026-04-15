@@ -96,7 +96,8 @@ def send_feishu_card(args: dict, **kwargs) -> str:
     title = args.get("title", "")
     chat_id = _resolve_chat_id(args, **kwargs)
     template = args.get("template", "blue")
-    reaction = args.get("reaction", "").strip() or None
+    reaction = args.get("reaction") or "DONE"  # Default: "DONE" (✅ completed)
+    # Set to empty string to skip reaction
 
     if not content:
         return json.dumps({"error": "No content provided"})
@@ -161,7 +162,8 @@ def send_feishu_table(args: dict, **kwargs) -> str:
     title = args.get("title", "") or "📊 数据表格"
     chat_id = _resolve_chat_id(args, **kwargs)
     template = args.get("template", "blue")
-    reaction = args.get("reaction", "").strip() or None
+    reaction = args.get("reaction") or "DONE"  # Default: "DONE" (✅ completed)
+    # Set to empty string to skip reaction
 
     if not headers_raw:
         return json.dumps({"error": "No headers provided"})

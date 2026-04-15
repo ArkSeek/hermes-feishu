@@ -114,16 +114,16 @@ def send_card(
         app_id: Override app ID (defaults to env var).
         app_secret: Override app secret (defaults to env var).
         add_reaction: Feishu emoji_type to add as reaction after sending.
-                     Default: "YES" (✅, indicates completed).
+                     Default: "DONE" (✅, indicates completed).
                      Pass empty string "" to skip reaction.
                      See: https://open.feishu.cn/document/server-docs/im-v1/message-reaction/emojis-introduce
 
     Returns:
         JSON string with send result: {"success": bool, "message_id": str|None, "error": str|None}
     """
-    # Default reaction: YES (✅) to indicate task completed
+    # Default reaction: DONE (✅) to indicate task completed
     if add_reaction is None:
-        add_reaction = "YES"
+        add_reaction = "DONE"
     if app_id is None or app_secret is None:
         try:
             resolved_id, resolved_secret = _get_credentials()
